@@ -32,7 +32,7 @@ const QuestionCard = () => {
 			setTimeout(() => {
 				banner.innerHTML = '';
 				banner.classList.remove('correct');
-			}, 5_000);
+			}, 2_000);
 		} else if (answer !== question.correctAnswer && selectedAnswer !== undefined) {
 			setIsLoading(true);
 			banner.innerHTML = 'incorrect';
@@ -41,7 +41,7 @@ const QuestionCard = () => {
 			setTimeout(() => {
 				banner.innerHTML = '';
 				banner.classList.remove('incorrect');
-			}, 5_000);
+			}, 2_000);
 		}
 	};
 
