@@ -1,9 +1,7 @@
 /** @format */
 
 import './index.min.css';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { Container, CircularProgress } from '@mui/material';
+import { Container } from '@mui/material';
 import QuestionCard from './Components/QuestionCard';
 
 function App() {

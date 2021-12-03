@@ -28,12 +28,16 @@ const QuestionCard = () => {
 			setIsLoading(true);
 			banner.innerHTML = 'correct';
 			banner.classList.add('correct');
+			setSelectedAnswer('');
 			setTimeout(() => {
 				banner.innerHTML = '';
 				banner.classList.remove('correct');
 			}, 5_000);
 		} else if (answer !== question.correctAnswer && selectedAnswer !== undefined) {
 			setIsLoading(true);
+			banner.innerHTML = 'incorrect';
+			banner.classList.add('incorrect');
+			setSelectedAnswer('');
 			setTimeout(() => {
 				banner.innerHTML = '';
 				banner.classList.remove('incorrect');
@@ -61,12 +65,13 @@ const QuestionCard = () => {
 			}
 		};
 		pushCorrectQuestion();
-	}, [isLoading]);
+	}, [isLoading]); //eslint-disable-line
 
 	useEffect(() => {}, [question]);
 
 	return (
 		<Card className='QuestionCard'>
+			{/*eslint-disable-next-line*/}
 			<h3 className='correctionBanner'></h3>
 			{!isLoading ? (
 				<>
